@@ -25,10 +25,6 @@ export default function Entry({ itemData }) {
         <div className="card-body">
           <h5 className="card-title">{itemData.data.name}</h5>
           <p className="card-text">{itemData.data.description}</p>
-          {itemData.data.url ?
-            <a className="btn btn-primary" href={itemData.data.url}>Link out</a>
-            : null
-          }
         </div>
       </article>
     );

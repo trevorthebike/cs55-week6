@@ -3,7 +3,7 @@ import firebase from "../../lib/firebase";
 
 export default async function handler(req, res) {
   try{
-    const snapshot = await firebase.collection("resources").get();
+    const snapshot = await firebase.collection("friends").get();
     let output = [];
     snapshot.forEach(
       (doc) => {
@@ -15,7 +15,6 @@ export default async function handler(req, res) {
         );
       }
     );
-
 
     console.log(output);
     res.setHeader("Content-Type", "application/json");
